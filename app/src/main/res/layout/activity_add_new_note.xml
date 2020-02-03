@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="AddNewNoteActivityBinding" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/view_toolbar" android:id="@+id/toolbar"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/addNewNestedScrollview"
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_marginBottom="100dp"
+                android:id="@+id/writeDiary"
+                android:layout_marginHorizontal="@dimen/margin_xlarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/margin_large"
+                    android:id="@+id/linearPhoto"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.app.mijandev.mediary.page.customfont.MyTextView_SF_Pro_Display_Semibold
+                        android:layout_width="match_parent"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:text="Photo"
+                        android:textColor="#323643"
+                        android:textSize="@dimen/font_xlarge"/>
+
+                    <View
+                        android:background="@color/colorPrimary"
+                        android:layout_width="20dp"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_height="4dp"/>
+
+                    <RelativeLayout
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp">
+
+                        <ImageView
+                            android:id="@+id/notePhoto"
+                            android:scaleType="centerCrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <com.app.mijandev.mediary.page.customfont.MyTextView_SF_Pro_Display_Semibold
+                            android:layout_width="wrap_content"
+                            android:id="@+id/deleteNotePhoto"
+                            android:text="DELETE PHOTO"
+                            android:paddingHorizontal="@dimen/margin_medium"
+                            android:paddingVertical="@dimen/padding_large"
+                            android:background="@color/colorPrimary"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:layout_centerInParent="true"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <com.app.mijandev.mediary.page.customfont.MyTextView_SF_Pro_Display_Semibold
+                    android:layout_width="match_parent"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text="Mood"
+                    android:textColor="#323643"
+                    android:textSize="@dimen/font_xlarge"/>
+
+                <View
+                    android:background="@color/colorPrimary"
+                    android:layout_width="20dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_height="4dp"/>
+
+                <com.hsalf.smilerating.SmileRating
+                    android:layout_marginTop="@dimen/margin_xlarge"
+                    android:id="@+id/smiley_rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+
+                <com.app.mijandev.mediary.page.customfont.MyTextView_SF_Pro_Display_Semibold
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/margin_xlarge"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text="Dear Diary"
+                    android:textColor="#323643"
+                    android:textSize="@dimen/font_xlarge"/>
+
+                <View
+                    android:background="@color/colorPrimary"
+                    android:layout_width="20dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_height="4dp"/>
+
+                <com.app.mijandev.mediary.page.customfont.EditText__SF_Pro_Display_Regular
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:id="@+id/noteEditText"
+                    android:layout_width="match_parent"
+                    android:hint="I am ..."
+                    android:gravity="start"
+                    android:minLines="5"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            app:fabCustomSize="64dp"
+            android:id="@+id/saveNoteButton"
+            app:useCompatPadding="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_check_black_24dp"
+            android:tint="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/emptyContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:src="@drawable/ic_notfound"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+        <com.app.mijandev.mediary.page.customfont.MyTextView_SF_Pro_Display_Semibold
+            android:id="@+id/fav_display_text"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:text="Ops, no entry added yet"
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+</layout>

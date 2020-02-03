@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="ViewNoteBinding" />
+
+    <androidx.cardview.widget.CardView
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/linearBtn">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/padding_large">
+
+                    <com.app.mijandev.mediary.page.customfont.MyTextView_SF_Pro_Display_Bold
+                        android:id="@+id/noteMood"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/rect_bg_red"
+                        android:elevation="4dp"
+                        android:paddingHorizontal="@dimen/padding_medium"
+                        android:paddingVertical="@dimen/padding_medium"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <com.app.mijandev.mediary.page.customfont.MyTextView_SF_Pro_Display_Light
+                        android:id="@+id/noteDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:gravity="center_horizontal"
+                        android:paddingHorizontal="@dimen/padding_medium"
+                        android:textSize="@dimen/font_small" />
+
+                    <ImageView
+                        android:id="@+id/notePhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:elevation="4dp"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/noteText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/margin_xlarge"
+                        android:paddingHorizontal="@dimen/padding_medium" />
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <LinearLayout
+                android:id="@+id/linearBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:elevation="4dp"
+                android:orientation="horizontal">
+
+                <com.app.mijandev.mediary.page.customfont.MyTextView_SF_Pro_Display_Semibold
+                    android:id="@+id/deleteNote"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FF5252"
+                    android:gravity="center_horizontal"
+                    android:paddingVertical="@dimen/padding_xlarge"
+                    android:text="DELETE"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <com.app.mijandev.mediary.page.customfont.MyTextView_SF_Pro_Display_Semibold
+                    android:layout_width="0dp"
+                    android:id="@+id/editNote"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center_horizontal"
+                    android:paddingVertical="@dimen/padding_xlarge"
+                    android:text="EDIT"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

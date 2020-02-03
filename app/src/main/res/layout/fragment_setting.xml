@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="SettingFragmentBinding" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/margin_xlarge"
+        android:paddingHorizontal="@dimen/margin_xlarge"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical">
+
+            <com.app.mijandev.mediary.page.customfont.MyTextView_SF_Pro_Display_Semibold
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:id="@+id/monthYearTextview"
+                android:textColor="#323643"
+                android:textSize="@dimen/font_xlarge"/>
+
+            <View
+                android:background="@color/colorPrimary"
+                android:layout_width="20dp"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_height="4dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.app.mijandev.mediary.page.customfont.MyTextView_SF_Pro_Display_Bold
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Enable Fingerprint Authentication"/>
+
+            <Switch
+                android:id="@+id/fingerPrintSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</layout>

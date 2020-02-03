@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="NoteListFragmentBinding" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_marginHorizontal="@dimen/margin_xlarge"
+            android:layout_marginVertical="@dimen/margin_xlarge"
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" android:orientation="vertical">
+
+                <com.app.mijandev.mediary.page.customfont.MyTextView_SF_Pro_Display_Semibold
+                    android:layout_width="match_parent"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dateTextView"
+                    android:text="Today"
+                    android:textColor="#323643"
+                    android:textSize="@dimen/font_xlarge"/>
+
+                <View
+                    android:background="@color/colorPrimary"
+                    android:layout_width="20dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_height="4dp"/>
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/datePicker"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_date_range_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+
+        <include
+            android:layout_marginTop="@dimen/margin_large"
+            android:id="@+id/loader_layout"
+            layout="@layout/view_loader"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/topBar"/>
+
+        <include
+            android:id="@+id/empty_layout"
+            layout="@layout/view_empty"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/topBar"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/topBar"
+            android:id="@+id/notesList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            app:fabCustomSize="64dp"
+            android:id="@+id/addNoteButton"
+            app:useCompatPadding="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_create_black_24dp"
+            android:tint="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"/>
+
+
+
+    </RelativeLayout>
+
+
+
+
+</layout>
